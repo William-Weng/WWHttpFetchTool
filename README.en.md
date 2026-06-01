@@ -8,7 +8,7 @@
 
 [English](./README.en.md) | [繁體中文](./README.md)
 
-# WWHttpFetchTool
+---
 
 ## 🎉 Overview
 `WWHttpFetchTool` is a lightweight Swift utility for sending HTTP requests and returning the response content as plain text.
