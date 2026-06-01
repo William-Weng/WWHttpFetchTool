@@ -7,13 +7,28 @@
 
 import Foundation
 
-public extension WWHttpFetchTool {
+extension WWHttpFetchTool {
     
     final class Service: Sendable {
         
-        public init() {}
-        
-        public func fetch(urlString: String, method: String, mode: String, headers: [String: String]) async throws -> String {
+        init() {}
+
+        /// 發送 HTTP 請求並回傳伺服器回應的文字內容。
+        ///
+        /// - Parameters:
+        ///   - urlString: 要請求的網址字串。
+        ///   - method: HTTP 方法，例如 `GET`、`POST`、`PUT`、`DELETE`。
+        ///   - mode: 回傳內容模式，例如 `html`、`json`、`text` 或 `auto`。
+        ///           目前此參數不影響最終輸出，僅保留作為未來擴充用途。
+        ///   - headers: 額外要加入的 HTTP Header。
+        ///
+        /// - Returns: 伺服器回應內容，並以 UTF-8 字串形式回傳。
+        ///
+        /// - Throws:
+        ///   - `CustomError.invalidURL`: `urlString` 無法建立為有效的 `URL`。
+        ///   - `CustomError.requestFailed`: 請求失敗，或 HTTP 狀態碼不在 `200...299` 範圍內。
+        ///   - `CustomError.decodingFailed`: 回傳資料無法以 UTF-8 解碼為字串。
+        func fetch(urlString: String, method: String, mode: String, headers: [String: String]) async throws -> String {
             
             guard let url = URL(string: urlString) else { throw CustomError.invalidURL }
             
