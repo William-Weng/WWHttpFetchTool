@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWHttpFetchTool",
       "state" : {
-        "revision" : "c3546fa8d014ff64f4390ccf39dfbf30fd24b4b5",
-        "version" : "0.1.0"
+        "revision" : "f0dd1cac319bb9023905f13a5fc7dd7d8d21d5b4",
+        "version" : "0.1.1"
       }
     }
   ],

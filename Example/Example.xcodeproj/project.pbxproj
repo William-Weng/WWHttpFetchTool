@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		817308D72FD0163C003747D2 /* WWHttpFetchTool in Frameworks */ = {isa = PBXBuildFile; productRef = 817308D62FD0163C003747D2 /* WWHttpFetchTool */; };
+		81E07C4E2FD02597000235FE /* WWHttpFetchTool in Frameworks */ = {isa = PBXBuildFile; productRef = 81E07C4D2FD02597000235FE /* WWHttpFetchTool */; };
+		81E07C512FD025E1000235FE /* WWHttpFetchTool in Frameworks */ = {isa = PBXBuildFile; productRef = 81E07C502FD025E1000235FE /* WWHttpFetchTool */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				817308D72FD0163C003747D2 /* WWHttpFetchTool in Frameworks */,
+				81E07C4E2FD02597000235FE /* WWHttpFetchTool in Frameworks */,
+				81E07C512FD025E1000235FE /* WWHttpFetchTool in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +85,8 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				817308D62FD0163C003747D2 /* WWHttpFetchTool */,
+				81E07C4D2FD02597000235FE /* WWHttpFetchTool */,
+				81E07C502FD025E1000235FE /* WWHttpFetchTool */,
 			);
 			productName = Example;
 			productReference = 817EE1FE2EB1FA050036B57C /* Example.app */;
@@ -114,7 +117,7 @@
 			mainGroup = 817EE1F52EB1FA050036B57C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				817308D52FD0163C003747D2 /* XCRemoteSwiftPackageReference "WWHttpFetchTool" */,
+				81E07C4F2FD025E1000235FE /* XCRemoteSwiftPackageReference "WWHttpFetchTool" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 817EE1FF2EB1FA050036B57C /* Products */;
@@ -360,7 +363,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		817308D52FD0163C003747D2 /* XCRemoteSwiftPackageReference "WWHttpFetchTool" */ = {
+		81E07C4F2FD025E1000235FE /* XCRemoteSwiftPackageReference "WWHttpFetchTool" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWHttpFetchTool";
 			requirement = {
@@ -371,9 +374,13 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		817308D62FD0163C003747D2 /* WWHttpFetchTool */ = {
+		81E07C4D2FD02597000235FE /* WWHttpFetchTool */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 817308D52FD0163C003747D2 /* XCRemoteSwiftPackageReference "WWHttpFetchTool" */;
+			productName = WWHttpFetchTool;
+		};
+		81E07C502FD025E1000235FE /* WWHttpFetchTool */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81E07C4F2FD025E1000235FE /* XCRemoteSwiftPackageReference "WWHttpFetchTool" */;
 			productName = WWHttpFetchTool;
 		};
 /* End XCSwiftPackageProductDependency section */
