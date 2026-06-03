@@ -45,7 +45,7 @@ Add the package dependency to your `Package.swift`:
 
 ```swift
 .dependencies: [
-    .package(url: "https://github.com/your-name/WWHttpFetchTool.git", from: "1.0.0")
+    .package(url: "https://github.com/your-name/WWHttpFetchTool.git", from: "0.1.1")
 ]
 ```
 
@@ -65,23 +65,32 @@ Then add it to your target:
 ### Basic Example
 
 ```swift
-import Foundation
+import UIKit
+import WWHttpFetchTool
 
-let tool = WWHttpFetchTool()
+final class ViewController: UIViewController {
 
-let arguments = WWHttpFetchTool.Arguments(
-    url: "https://example.com",
-    method: "GET",
-    mode: "text",
-    headers: []
-)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetch(url: "https://raw.githubusercontent.com/William-Weng/WWHttpFetchTool/refs/heads/main/LICENSE")
+    }
+}
 
-Task {
-    do {
-        let result = try await tool.call(arguments: arguments)
-        print(result.first ?? "")
-    } catch {
-        print(error.localizedDescription)
+extension ViewController {
+    
+    func fetch(url: String) {
+
+        let tool = WWHttpFetchTool()
+        let arguments = WWHttpFetchTool.Arguments(url: url, method: "GET", mode: "text", headers: [])
+
+        Task {
+            do {
+                let result = try await tool.call(arguments: arguments)
+                print(result.first ?? "")
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 ```

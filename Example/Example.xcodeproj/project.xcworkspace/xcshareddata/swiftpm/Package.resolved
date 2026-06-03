@@ -1,0 +1,15 @@
+{
+  "originHash" : "74c51f904756c1b1c441c83b2ffd2cfbc05cb838899a9e4e6e700614000f0985",
+  "pins" : [
+    {
+      "identity" : "wwhttpfetchtool",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWHttpFetchTool",
+      "state" : {
+        "revision" : "c3546fa8d014ff64f4390ccf39dfbf30fd24b4b5",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "WWHttpFetchTool", targets: ["WWHttpFetchTool"]),
     ],
     targets: [
-        .target(name: "WWHttpFetchTool"),
+        .target(name: "WWHttpFetchTool", resources: [.copy("Privacy")]),
     ],
     swiftLanguageModes: [
         .v6
